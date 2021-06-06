@@ -94,7 +94,7 @@ export const setWheel = (id) => {
 
 export const addOrder = () => {
     const newOrder = {...database.carOrders}
-    var lastIndex = database.orders.length - 1
+    const lastIndex = database.orders.length - 1
     if (lastIndex === -1) {
         newOrder.id = 1
     }
