@@ -4,7 +4,8 @@ import { PaintColors } from './PaintColors.js'
 import { Interiors } from './Interiors.js'
 import { Tech } from './Tech.js'
 import { Wheels } from './Wheels.js'
-
+import { VehicleTypes } from './VehicleTypes.js'
+ 
 document.addEventListener(
     'click',
     (clickEvent) => {
@@ -38,6 +39,9 @@ export const CarsRUs = () => {
                 <h2>Wheels</h2>
                 ${Wheels()}
             </section>
+            <section class='choices__vehicle__types options'>
+                <h2>Vehicle Types</h2>
+                ${VehicleTypes()}
         </article>
 
         <article>

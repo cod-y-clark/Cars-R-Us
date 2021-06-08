@@ -27,6 +27,11 @@ const database = {
         { id: 3, type: '18-inch Pair Spoke Silver', price: 500 },
         { id: 4, type: '18-inch Pair Spoke Black', price: 500 }
     ],
+    types: [
+        { id: 1, type: 'Car' },
+        { id: 2, type: 'SUV' },
+        { id: 3, type: 'Truck' }
+    ],
     orders: [
         // {
         //     id: 0,
@@ -58,6 +63,10 @@ export const getWheels = () => {
     return database.wheels.map(wheel => ({...wheel}))
 }
 
+export const getTypes = () => {
+    return database.types.map(type => ({...type}))
+}
+
 // this function will be exported so that other modules can invoke it to pull purchases that are placed in the app
 export const getOrders = () => {
     return database.orders.map(order => ({...order}))
@@ -78,6 +87,10 @@ export const setTechnology = (id) => {
 
 export const setWheel = (id) => {
     database.carOrders.wheelId = id
+}
+
+export const setType = (id) => {
+    database.carOrders.typeId = id
 }
 
 // This function will change the permanent state to include our new car order, and will then reset the state of the carOrders object so it will be ready for the next order. 
